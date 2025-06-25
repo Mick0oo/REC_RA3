@@ -32,9 +32,16 @@ __Para cada algoritmo:__
 Entre os algoritmos de hashing testados, o algoritmo de Resto de Divisão teve o maior desempenho geral. 
 
 
-
+# Gráficos (Barras)
 ![Image](https://github.com/user-attachments/assets/e913e68a-8eb1-4d80-98a0-48007e6ad82e)
 
 ![Image](https://github.com/user-attachments/assets/e624ab39-9c3f-4064-9e16-40a14f3582c4)
 
 ![Image](https://github.com/user-attachments/assets/ffdfa451-ae93-4405-aea3-b02a6b8cad36)
+
+# Gráficos (Linha)
+
+![Image](https://github.com/user-attachments/assets/bbdcd0ba-42b3-430a-ab66-5cf57f54d546)
+![Image](https://github.com/user-attachments/assets/f0c06851-d874-4c4f-9084-2860f82c3137)
+![Image](https://github.com/user-attachments/assets/567a70e2-9276-42a6-9f22-99bdaa3bcb25)
+![Image](https://github.com/user-attachments/assets/637f41d7-3d77-4fb6-9241-2b172953ddde)
