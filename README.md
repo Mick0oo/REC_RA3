@@ -1,35 +1,35 @@
-# Recuperação do RA4 - ORDENAÇÃO
+# Recuperação do RA3 - HASHMAP
 # Resolução de Problemas Estruturados em Computação
 
-Algoritmos requisitados:
-- Radix Sort
-- Quick Sort Não recursivo (Iterativo)
-- Merge Sort Não recursivo (iterativo, bottom-up)
+São criadas tabelas hash com 3 tamanhos (1.000, 10.000 ou 100.000 elementos) para 3 diferentes algoritmos de hashing diferentes, resultando em 9 tabelas diferentes. Todas usando o mesmo conjunto de dados criado por meio do uso da mesma seed.
 
-Os dados são tirados a partir de 100 rodadas, para todos os algoritmos.
+Os algoritmos escolhidos para o hashing das tabelas foram: _Multiplicação_, _Resto de Divisão_ e _Dobramento_.
 
-São comparados os resultados dos três algoritmos contra três datasets de 50 elementos desorganizados de formas diferentes.
-Essa desorganização interage diferentemente com as fraquezas e as forças de cada um dos algoritmos.
+O código se encontra na pasta src. Contém classes para cada HashMap diferente, uma classe Registro (auxiliar) e a classe Main (main, testes).
 
-# Análise Dataset 1
-_Característica: 50 elementos, alternado com picos entre cada elemento (menor, maior)._
-O algoritmo com melhor desempenho foi o radix.
+## Análise:
+__Para tempo de inserção:__
 
-# Análise Dataset 2
-_Característica: 50 elementos, começa ordenado, tem um pico e continua invertido desde então._
-O algoritmo com melhor desempenho foi o radix.
+O algoritmo de hashing por Dobramento fora o mais rápido em todos os cenários.
 
-# Análise Dataset 3
-_Característica: 50 elementos, invertido. Sequência de 50 a 1._
-O algoritmo com melhor desempenho foi o radix.
+__Para quantidades de colisões:__ 
 
-# Outras anotações
-O merge sort é o mais consistente em todos os datasets para as trocas e iterações.
-O quick sort tem uma quantidade média de iterações muito maior que os outros algoritmos nos datasets invertidos (2,3).
+Dos algoritmos de hashing por Multiplicação e Resto de Divisão foram similar para todos os cenários.
+Já o algoritmo de Dobramento, ao aumentar o volume, ocorreram muito mais colisões que os outros, chegando a ter 355% mais colisões que o algoritmo de Resto de Divisão no caso de 100.000 elementos.
 
-# Conclusão
-O melhor algoritmo no geral é o Radix. Ele teve o desempenho mais satisfatório quando comparado aos outros, para todos os datasets. Isso ocorre pois os datasets são ideais para o radix. Eles são pequenos (50 elementos), e são compostos de integers positivos e não muito grandes.
+__Para as buscas:__
 
+O algoritmo de Dobramento começa sendo o mais rápido, mas acaba escalando horrívelmente ao aumentar o volume de dados. Nos cenários com grandes volumes de dados o algoritmo mais veloz foi o de Resto de Divisão. 
+Para todos os cenários o algoritmo de Dobramento teve maior méda de comparações.
+
+
+__Para cada algoritmo:__
+- O algoritmo de _Multiplicação_ é o mais mediano entre os algoritmos testados. Não houveram resultados notáveis.
+- O algoritmo de _Resto de Divisão_ é o melhor algoritmo para busca com grandes volumes de dados. Ele também tem um bom tempo de inserção para cenários de menores volumes de dados, mas não é muito mais notável além disso.
+- O algoritmo de _Dobramento_ é muito rápido com as inserções, mas não escala muito bem para colisões e busca.
+
+### Conclusão:
+Entre os algoritmos de hashing testados, o algoritmo de Resto de Divisão teve o maior desempenho geral. 
 
 
 
